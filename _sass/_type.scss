@@ -68,6 +68,12 @@ p {
   }
 }
 
+.h2-r {
+  @include breakpoint(one-hand) {
+    font-size:$type-3; 
+  }
+}
+
 // Uh you don't need to read this stuff. Let's make it small.
 .meta {
   font-size:$type-5; 

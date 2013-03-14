@@ -406,6 +406,10 @@ p {
   .h1-r {
     font-size: 64px; } }
 
+@media screen and (min-width: 100px) and (max-width: 479px) {
+  .h2-r {
+    font-size: 32px; } }
+
 .meta {
   font-size: 12px; }
 
