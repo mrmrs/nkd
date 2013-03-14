@@ -366,7 +366,9 @@ h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: .25em; }
 
 h1, .h1 {
-  font-size: 128px; }
+  font-size: 128px;
+  font-family: "proxima-nova";
+  font-weight: 900; }
 
 h2, .h2 {
   font-size: 64px; }
@@ -409,6 +411,10 @@ p {
 @media screen and (min-width: 100px) and (max-width: 479px) {
   .h2-r {
     font-size: 32px; } }
+
+@media screen and (min-width: 100px) and (max-width: 479px) {
+  .h3-r {
+    font-size: 20px; } }
 
 .meta {
   font-size: 12px; }
@@ -478,6 +484,18 @@ date {
 
 a {
   text-decoration: none; }
+
+.fuck-yeah-button {
+  display: inline-block;
+  padding: 2em;
+  border-radius: 4px;
+  background-color: #eee;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 1em; }
+
+.clone-this-dont-download-but-whatever {
+  margin: 2em 0; }
 
 nav[role="navigation"] li,
 ul.social li {
