@@ -1,6 +1,6 @@
 // The internet is run on paragraphs and links. Let people see them please.
 
-h1,h2,h3,h4,h5,h6 {
+h2,h3,h4,h5,h6 {
   font-weight:100;
 }
 
@@ -123,4 +123,11 @@ em {
 
 date {
   color:$grey-medium;
+}
+
+.mega {
+  font-size:256px;
+    @include breakpoint(one-hand) {
+        font-size:$type-1;
+    }
 }
