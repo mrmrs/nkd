@@ -1,17 +1,17 @@
 a {
- text-decoration:none;
  font-family: "proxima-nova"!important;
+ text-decoration:none;
 }
 
 .fuck-yeah-button {
-  display:inline-block;
-  padding:2em;
-  border-radius:4px;
   background-color:#eee;
+  border-radius:4px;
   color:#222;
+  display:inline-block;
   font-weight:bold;
+  font-size:$type-4;
   margin-bottom:1em;
-  font-size:$type-3;
+  padding:1em;
 }
 
 .clone-this-dont-download-but-whatever {

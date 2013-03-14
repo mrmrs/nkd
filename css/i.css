@@ -458,23 +458,6 @@ date {
 .bb {
   border-bottom: 1px dotted #eeeeee; }
 
-.large-list {
-  font-size: 20px; }
-  .large-list li {
-    border-top: 1px solid #eeeeee; }
-  .large-list a {
-    display: block;
-    padding: 1em 0;
-    color: #222222;
-    line-height: 1.5;
-    text-decoration: none; }
-    .large-list a:hover, .large-list a:active {
-      color: #ff5335; }
-      .large-list a:hover .meta, .large-list a:active .meta {
-        color: #ff5335; }
-    .large-list a .meta {
-      display: block; }
-
 .post ul, .post dl {
   line-height: 1.618;
   font-size: 20px;
@@ -489,18 +472,18 @@ date {
   margin-left: 1em; }
 
 a {
-  text-decoration: none;
-  font-family: "proxima-nova"!important; }
+  font-family: "proxima-nova"!important;
+  text-decoration: none; }
 
 .fuck-yeah-button {
-  display: inline-block;
-  padding: 2em;
-  border-radius: 4px;
   background-color: #eee;
+  border-radius: 4px;
   color: #222;
+  display: inline-block;
   font-weight: bold;
+  font-size: 20px;
   margin-bottom: 1em;
-  font-size: 32px; }
+  padding: 1em; }
 
 .clone-this-dont-download-but-whatever {
   margin: 2em 0; }
