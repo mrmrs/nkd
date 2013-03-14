@@ -1,0 +1,15 @@
+.single-column {
+  margin:0 auto;
+  padding:1em;
+  width:100%;
+  max-width:768px!important;
+}
+
+@mixin breakpoint($viewport-width) {
+  @if $viewport-width == one-hand {
+    @media screen and (min-width:100px) and (max-width: 479px) { 
+      @content; 
+    }  
+  }
+}
+

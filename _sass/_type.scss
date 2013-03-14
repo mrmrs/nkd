@@ -1,0 +1,112 @@
+// The internet is run on paragraphs and links. Let people see them please.
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight:100;
+}
+
+// I mean it's not that big.
+
+h1,.h2,.h3,.h4,.h5,.h6 {
+  margin-bottom:.25em;
+}
+
+h1,.h1 {
+  font-size:$type-1;
+}
+
+h2,.h2 {
+  font-size:$type-2;
+}
+
+h3,.h3 {
+  font-size:$type-3;
+}
+
+h4,.h4 {
+  font-size:$type-4;
+  font-weight:900;
+}
+
+h5,.h5 {
+  font-size:$type-4;
+  font-style:italic;
+}
+
+h6,.h6 {
+  font-size:$type-5;
+}
+
+p {
+  // Because 20px body copy is the new Black
+  font-size:$type-4;
+  line-height:$copy-line-height;
+  + p { 
+    //text-indent:1em; 
+    margin-top:1em;
+  }
+}
+
+.intro {
+  font-size:$type-3;
+}
+
+.post {
+   h1 {
+    font-size:$type-2;
+    @include breakpoint(one-hand) {
+        font-size:$type-3;
+    }
+  }
+  footer {
+    color:$grey-light;
+  }
+}
+
+.h1-r {
+  @include breakpoint(one-hand) {
+    font-size:$type-2; 
+  }
+}
+
+// Uh you don't need to read this stuff. Let's make it small.
+.meta {
+  font-size:$type-5; 
+}
+
+.ct {
+  text-align:center;
+  @include breakpoint(one-hand) {
+    text-align:left;
+  }
+}
+
+blockquote {
+  padding:1em 0 1.75em 0;
+  font-style:italic;
+  p {
+    font-size:$type-3;
+  }
+  footer,footer a {
+    font-size:$type-4;
+    line-height:2;
+    text-decoration:none;
+    color:#999;
+  }
+}
+
+em {
+  font-style:italic;
+}
+
+.bump-it {
+  font-size:$type-3; 
+  margin-bottom:1em;
+}
+
+.author {
+  text-transform:uppercase;
+}
+
+date {
+  color:$grey-medium;
+}

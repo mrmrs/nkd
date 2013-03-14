@@ -1,0 +1,40 @@
+.large-list {
+  font-size:$type-4;  
+  li {
+    border-top:1px solid #eee;
+  }
+  a {
+    display:block;
+    padding:1em 0;
+    color:$grey-dark;
+    line-height:1.5;
+    text-decoration:none;
+    &:hover,
+    &:active {
+      color:$orange;
+      .meta {color:$orange;}
+    }
+    .meta {
+      display:block; 
+    }
+  }
+}
+
+.post {
+    ul,dl {
+      line-height:1.618; 
+      font-size:$type-4;
+      margin-bottom:1em;
+    }
+    dt {
+      font-weight:bold; 
+    }
+    dd {
+      margin-bottom:.5em; 
+      color:$grey-medium;
+    }
+    ul {
+      list-style-type:disc; 
+      margin-left:1em;
+    }
+}
