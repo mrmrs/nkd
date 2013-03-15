@@ -360,7 +360,8 @@ $margin:;
   max-width: 768px!important; }
 
 html, body {
-  background-color: #BDE0E9; }
+  background-color: #BDE0E9;
+  font-family: 'ff-meta-serif-web-pro',serif; }
 
 h2, h3, h4, h5, h6 {
   font-weight: 100; }
@@ -370,7 +371,7 @@ h1, .h2, .h3, .h4, .h5, .h6 {
 
 h1, .h1 {
   font-size: 128px;
-  font-family: "proxima-nova";
+  font-family: 'ff-meta-web-pro',sans-serif;
   font-weight: 900; }
 
 h2, .h2 {
