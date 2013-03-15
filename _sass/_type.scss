@@ -57,18 +57,6 @@ p {
   font-size:$type-3;
 }
 
-.post {
-   h1 {
-    font-size:$type-2;
-    @include breakpoint(one-hand) {
-        font-size:$type-3;
-    }
-  }
-  footer {
-    color:$grey-light;
-  }
-}
-
 .h1-r {
   @include breakpoint(one-hand) {
     font-size:$type-2; 
@@ -130,9 +118,18 @@ date {
   color:$grey-medium;
 }
 
+
 .mega {
   font-size:256px;
+  margin-top:.5em;
+  margin-bottom:0;
     @include breakpoint(one-hand) {
         font-size:$type-1;
     }
 }
+
+.f1 {font-size:$type-1;}
+.f2 {font-size:$type-2;}
+.f3 {font-size:$type-3;}
+.f4 {font-size:$type-4;}
+.f5 {font-size:$type-5;}

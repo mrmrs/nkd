@@ -355,7 +355,7 @@ $margin:;
 */
 .single-column {
   margin: 0 auto;
-  padding: 1em;
+  padding: 2em;
   width: 100%;
   max-width: 768px!important; }
 
@@ -399,14 +399,6 @@ p {
 
 .intro {
   font-size: 32px; }
-
-.post h1 {
-  font-size: 64px; }
-  @media screen and (min-width: 100px) and (max-width: 479px) {
-    .post h1 {
-      font-size: 32px; } }
-.post footer {
-  color: #eeeeee; }
 
 @media screen and (min-width: 100px) and (max-width: 479px) {
   .h1-r {
@@ -454,10 +446,27 @@ date {
   color: #777777; }
 
 .mega {
-  font-size: 256px; }
+  font-size: 256px;
+  margin-top: .5em;
+  margin-bottom: 0; }
   @media screen and (min-width: 100px) and (max-width: 479px) {
     .mega {
       font-size: 128px; } }
+
+.f1 {
+  font-size: 128px; }
+
+.f2 {
+  font-size: 64px; }
+
+.f3 {
+  font-size: 32px; }
+
+.f4 {
+  font-size: 20px; }
+
+.f5 {
+  font-size: 12px; }
 
 .bb {
   border-bottom: 1px dotted #eeeeee; }
