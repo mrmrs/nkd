@@ -485,8 +485,9 @@ date {
   margin-left: 1em; }
 
 a {
-  font-family: "proxima-nova"!important;
-  text-decoration: none; }
+  text-decoration: none;
+  font-family: 'ff-meta-web-pro',sans-serif;
+  font-weight: 100; }
 
 .fuck-yeah-button {
   background-color: #eee;
@@ -500,6 +501,15 @@ a {
 
 .clone-this-dont-download-but-whatever {
   margin: 2em 0; }
+
+.fuck-yeah-github {
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 1.5em;
+  background-color: #222;
+  color: #ddd;
+  font-size: 12px; }
 
 nav[role="navigation"] li,
 ul.social li {
