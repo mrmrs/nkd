@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Text Links
+   ========================================================================== */
+
+/* Removes default underline for text links. 
+   ========================================================================== */
+a,
+.tl,
+.tl:link,
+.tl:visited,
+.tl:hover,
+.tl:active,
+.tl:focus {
+  text-decoration:none;
+  color:#444;
+}
+
+.download-btn {
+  border-radius:2px;
+  background:#eee;
+  padding:20px;
+  @extend .sans-serif;
+  @extend .caps-lock;
+}

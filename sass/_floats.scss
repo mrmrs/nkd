@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Float Utilities 
+   ========================================================================== */
+
+.fl { float:left;  }
+.fr { float:right; }        
+
+
+/*  
+ * Clear Fix
+ * Should be used on elements that contain children that are floated.
+ *
+ */
+
+.cf:before,
+.cf:after {
+  content: " ";
+}

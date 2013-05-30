@@ -1,0 +1,17 @@
+/* ==========================================================================
+   DISPLAY
+   ========================================================================== */
+
+
+
+.d-b  { display:block;        } 
+.d-i  { display:inline;       }
+.d-ib { display:inline-block; }
+.d-n  { display:none;         }
+.d-t  { display:table;        }
+.d-tc { display:table-cell;   }
+
+.full {
+  display:block;
+  width:100%;
+}

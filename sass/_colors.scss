@@ -1,0 +1,18 @@
+/* ==========================================================================
+   COLOR UTILITIES
+   ========================================================================== */
+
+.pink {color:#BF0072;}
+.bg-pink {color:#fff;background-color:#BF0072;}
+.dk {color:#fff;}
+
+.mid-gray {color:#bf0072;}
+.shade {background:rgba(0,0,0,.3);}
+
+.un-saturate {
+  -webkit-filter:grayscale(1); /* Will make an image black and white */
+}
+
+.over-saturate {
+  //-webkit-filter:saturation(150%); /* Will oversaturate an image */
+}
