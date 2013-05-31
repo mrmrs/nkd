@@ -21,3 +21,8 @@ a,
   @extend .sans-serif;
   @extend .caps-lock;
 }
+.opacity-hover {-webkit-transition:opacity .4s;opacity:1;}
+.opacity-hover:hover {
+  opacity:0.8;
+  -webkit-transition:opacity .4s;
+}

@@ -154,6 +154,14 @@ a,
   border-radius: 2px;
   background: #eee; }
 
+.opacity-hover {
+  -webkit-transition: opacity .4s;
+  opacity: 1; }
+
+.opacity-hover:hover {
+  opacity: 0.8;
+  -webkit-transition: opacity .4s; }
+
 /* ==========================================================================
    SKINS
    ========================================================================== */
@@ -509,7 +517,7 @@ body, html {
 
 .column {
   margin: 0 auto;
-  max-width: 700px; }
+  max-width: 640px; }
 
 .twitter {
   margin: 10px auto;
@@ -520,8 +528,12 @@ body, html {
   display: block;
   text-indent: -9999px;
   line-height: 48px;
-  font-size: 14px; }
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  -webkit-transition: text-indent .4s,opacity .4s; }
   .twitter:hover {
     -webkit-transition: text-indent .4s,opacity .4s;
-    opacity: 0.7;
+    opacity: 0.8;
     text-indent: 56px; }
