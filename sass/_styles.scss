@@ -14,15 +14,12 @@ body,html {height:100%;position:relative;margin:0;padding:0;font-size:20px;}
 }
 
 .feature-list {
-  padding-top:40px;
-  padding-bottom:80px;
   list-style-type:none;
   margin:0;
   padding-left:0;
   .list-item {
     margin:0;
     padding:10px 0; 
-    
   }
 }
 
@@ -31,3 +28,7 @@ body,html {height:100%;position:relative;margin:0;padding:0;font-size:20px;}
   max-width:700px;
 }
 
+.column {
+  margin:0 auto;
+  max-width:700px;
+}

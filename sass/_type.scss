@@ -3,8 +3,9 @@
 
    - Headers
    ========================================================================== */
+body {font-family:baskerville;}
 .serif {font-family: georgia;}
-.sans-serif {font-family:"proxima-nova", helvetica, arial, sans-serif;}
+.ss,.sans-serif {font-family:"proxima-nova", helvetica, arial, sans-serif;}
 
 /* Headers
    ========================================================================== */
@@ -16,21 +17,32 @@ h2,h3,h4,h5,h6 { font-family: "proxima-nova", helvetica, sans-serif;font-weight:
                  font-style:italic;
                  font-weight:900;
 }
+.fw-6 { font-weight:600; }
 
-.mega  { font-size: $font-size-wtf; }
-h1,.h1 { font-size: $font-size-1;   }
-h2,.h2 { font-size: $font-size-2;   }
-h3,.h3 { font-size: $font-size-3;   }
-h4,.h4 { font-size: $font-size-4;   }
-h5,.h5 { font-size: $font-size-5;   }
-h6,.h6 { font-size: $font-size-6;   }
 
+.mega {font-size:$font-size-wth;}
+h1,.h1,.f1 { font-size: $font-size-1;   }
+h2,.h2,.f2 { font-size: $font-size-2;   }
+h3,.h3,.f3 { font-size: $font-size-3;   }
+h4,.h4,.f4 { font-size: $font-size-4;   }
+h5,.h5,.f5 { font-size: $font-size-5;   }
+h6,.h6,.f6 { font-size: $font-size-6;   }
+
+@include breakpoint(tablet){.h3 {font-size:$font-size-2;}}
+@include breakpoint(desktop){
+  .mega  { 
+    font-size: $font-size-wtf; 
+  }
+  .h3 {
+    font-size: $font-size-2; 
+  }
+}
 
 /* Copy
    ========================================================================== */
 
-.intro {  font-size: $font-size-3;}
-p {       font-size: $font-size-4;}
+.intro {  font-size: $font-size-intro;}
+p {       font-size: $font-size-4; line-height:1.5;}
 .meta {   font-size: $font-size-6;}
 
 

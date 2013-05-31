@@ -1,7 +1,9 @@
 /* ==========================================================================
    SKINS
    ========================================================================== */
-  
+ 
+$brand-color:#a2d7e4;
+
 .bt {border-top:1px solid #ddd;}
 
 /* Background Dark */
@@ -12,8 +14,11 @@
 
 /* Background Light */
 .bg-li {
-  color:#111;
-  background:#f3f3f3;
+  color:darken($brand-color,50%);
+  background:$brand-color;
+  -webkit-transition:background .4s;
+  transition:background .4s;
+  
 }
 
 /* Background Medium */
@@ -27,4 +32,29 @@
 .default {
   color:#000;
   background:#fff;
+}
+
+.rnd {
+  border-radius:2px;
+}
+
+.b-li {
+  border:1px solid darken($brand-color,10%);
+}
+
+.bg-ow {
+  background:#f1f1f1;
+  color:#444;
+}
+
+.bb-ow {
+  border-bottom:1px solid #ddd;
+}
+
+.bg-li--hover {
+  &:hover {
+  -webkit-transition:background .4s;
+  transition:background .4s;
+  background-color:lighten($brand-color,15%);
+  }
 }

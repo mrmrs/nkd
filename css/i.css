@@ -152,8 +152,7 @@ a,
 
 .download-btn {
   border-radius: 2px;
-  background: #eee;
-  padding: 20px; }
+  background: #eee; }
 
 /* ==========================================================================
    SKINS
@@ -168,8 +167,10 @@ a,
 
 /* Background Light */
 .bg-li {
-  color: #111;
-  background: #f3f3f3; }
+  color: #1e5a69;
+  background: #a2d7e4;
+  -webkit-transition: background .4s;
+  transition: background .4s; }
 
 /* Background Medium */
 .bg-mi {
@@ -180,6 +181,24 @@ a,
 .default {
   color: #000;
   background: #fff; }
+
+.rnd {
+  border-radius: 2px; }
+
+.b-li {
+  border: 1px solid #7ac6d9; }
+
+.bg-ow {
+  background: #f1f1f1;
+  color: #444; }
+
+.bb-ow {
+  border-bottom: 1px solid #ddd; }
+
+.bg-li--hover:hover {
+  -webkit-transition: background .4s;
+  transition: background .4s;
+  background-color: #ddf1f5; }
 
 /* ==========================================================================
    Spacing 
@@ -235,6 +254,36 @@ a,
 .mb-1 {
   margin-bottom: 10px; }
 
+.m-2 {
+  margin: 20px; }
+
+.mr-2 {
+  margin-right: 20px; }
+
+.ml-2 {
+  margin-left: 20px; }
+
+.mt-2 {
+  margin-top: 20px; }
+
+.mb-2 {
+  margin-bottom: 20px; }
+
+.m-4 {
+  margin: 40px; }
+
+.mr-4 {
+  margin-right: 40px; }
+
+.ml-4 {
+  margin-left: 40px; }
+
+.mt-4 {
+  margin-top: 40px; }
+
+.mb-4 {
+  margin-bottom: 40px; }
+
 /* Padding Scale Step 1
    ========================================================================== */
 .p-1 {
@@ -282,15 +331,48 @@ a,
 .pb-4 {
   padding-bottom: 40px; }
 
+.p-6 {
+  padding: 60px; }
+
+.pr-6 {
+  padding-right: 60px; }
+
+.pl-6 {
+  padding-left: 60px; }
+
+.pt-6 {
+  padding-top: 60px; }
+
+.pb-6 {
+  padding-bottom: 60px; }
+
+.p-8 {
+  padding: 80px; }
+
+.pr-8 {
+  padding-right: 80px; }
+
+.pl-8 {
+  padding-left: 80px; }
+
+.pt-8 {
+  padding-top: 80px; }
+
+.pb-8 {
+  padding-bottom: 80px; }
+
 /* ==========================================================================
    TYPE 
 
    - Headers
    ========================================================================== */
+body {
+  font-family: baskerville; }
+
 .serif {
   font-family: georgia; }
 
-.sans-serif, .download-btn {
+.ss, .sans-serif, .download-btn {
   font-family: "proxima-nova", helvetica, arial, sans-serif; }
 
 /* Headers
@@ -306,34 +388,47 @@ h2, h3, h4, h5, h6 {
   font-style: italic;
   font-weight: 900; }
 
-.mega {
-  font-size: 256px; }
+.fw-6 {
+  font-weight: 600; }
 
-h1, .h1 {
+.mega {
+  font-size: 128px; }
+
+h1, .h1, .f1 {
   font-size: 64px; }
 
-h2, .h2 {
+h2, .h2, .f2 {
   font-size: 48px; }
 
-h3, .h3 {
+h3, .h3, .f3 {
   font-size: 32px; }
 
-h4, .h4 {
+h4, .h4, .f4 {
   font-size: 20px; }
 
-h5, .h5 {
+h5, .h5, .f5 {
   font-size: 16px; }
 
-h6, .h6 {
+h6, .h6, .f6 {
   font-size: 12px; }
 
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  .h3 {
+    font-size: 48px; } }
+@media screen and (min-width: 1024px) {
+  .mega {
+    font-size: 256px; }
+
+  .h3 {
+    font-size: 48px; } }
 /* Copy
    ========================================================================== */
 .intro {
-  font-size: 32px; }
+  font-size: 26px; }
 
 p {
-  font-size: 20px; }
+  font-size: 20px;
+  line-height: 1.5; }
 
 .meta {
   font-size: 12px; }
@@ -401,8 +496,6 @@ body, html {
   background-size: cover; }
 
 .feature-list {
-  padding-top: 40px;
-  padding-bottom: 80px;
   list-style-type: none;
   margin: 0;
   padding-left: 0; }
@@ -411,5 +504,9 @@ body, html {
     padding: 10px 0; }
 
 .content {
+  margin: 0 auto;
+  max-width: 700px; }
+
+.column {
   margin: 0 auto;
   max-width: 700px; }
