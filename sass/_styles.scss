@@ -32,3 +32,20 @@ body,html {height:100%;position:relative;margin:0;padding:0;font-size:20px;}
   margin:0 auto;
   max-width:700px;
 }
+
+.twitter {
+  margin:10px auto;
+  height:48px;
+  width:48px;
+  background:url(../images/twitter.svg) no-repeat center left;
+  background-size:48px 48px;
+  display:block;
+  text-indent:-9999px;
+  line-height:48px;
+  font-size:14px;
+  &:hover {
+    -webkit-transition:text-indent .4s,opacity .4s;
+    opacity:0.7;
+    text-indent:56px;
+  }
+}
