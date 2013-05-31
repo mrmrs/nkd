@@ -537,3 +537,10 @@ body, html {
     -webkit-transition: text-indent .4s,opacity .4s;
     opacity: 0.8;
     text-indent: 56px; }
+
+.download {
+  -webkit-transition: background 0.5s; }
+
+.download:hover {
+  background-color: #359eb8;
+  -webkit-transition: background 0.5s; }

@@ -53,3 +53,12 @@ body,html {height:100%;position:relative;margin:0;padding:0;font-size:20px;}
     text-indent:56px;
   }
 }
+
+.download {
+  -webkit-transition:background 0.5s;
+}
+
+.download:hover {
+  background-color:darken($brand-color,30%);
+  -webkit-transition:background 0.5s;
+}
