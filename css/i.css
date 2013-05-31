@@ -519,24 +519,33 @@ body, html {
   margin: 0 auto;
   max-width: 640px; }
 
-.twitter {
-  margin: 10px auto;
+.social-icon {
   height: 48px;
   width: 48px;
-  background: url(../images/twitter.svg) no-repeat center left;
   background-size: 48px 48px;
-  display: block;
-  text-indent: -9999px;
+  display: inline-block;
   line-height: 48px;
   font-size: 14px;
+  text-indent: -9999px;
   text-transform: uppercase;
-  color: #fff;
   font-weight: 600;
+  color: #fff;
+  opacity: 0.8;
   -webkit-transition: text-indent .4s,opacity .4s; }
+
+.twitter {
+  background: url(../images/twitter.svg) no-repeat top left; }
   .twitter:hover {
     -webkit-transition: text-indent .4s,opacity .4s;
-    opacity: 0.8;
-    text-indent: 56px; }
+    opacity: 0.6;
+    text-indent: 52px; }
+
+.github {
+  background: url(../images/octocat.svg) no-repeat top left; }
+  .github:hover {
+    -webkit-transition: text-indent .4s,opacity .4s;
+    opacity: 0.6;
+    text-indent: -150px; }
 
 .download {
   -webkit-transition: background 0.5s; }
