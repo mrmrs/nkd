@@ -34,35 +34,25 @@ body,html {height:100%;position:relative;margin:0;padding:0;font-size:20px;}
 }
 
 
-.social-icon {
-  height:48px;
-  width:48px;
-  background-size:48px 48px;
-  display:inline-block;
-  line-height:48px;
-  font-size:14px;
-  text-indent:-9999px;
-  text-transform:uppercase;
-  font-weight:600;
-  color:#fff;
-  opacity:0.8;
-  -webkit-transition:text-indent .4s,opacity .4s;
-}
 
 .twitter {
-  background:url(../images/twitter.svg) no-repeat top left;
+  background-image:url(../images/twitter.svg);
+  background-repeat: no-repeat;
+  background-position: top-left;
   &:hover {
     -webkit-transition:text-indent .4s,opacity .4s;
-    opacity:0.6;
+    opacity:1;
     text-indent:52px;
   }
 }
 
 .github {
-  background:url(../images/octocat.svg) no-repeat top left;
+  background-image:url(../images/octocat.svg);
+  background-repeat: no-repeat;
+  background-position: top-left;
   &:hover {
-    -webkit-transition:text-indent .4s,opacity .4s;
-    opacity:0.6;
+    -webkit-transition:text-indent .4s, opacity .4s;
+    opacity:1;
     text-indent:-150px;
   }
 }
@@ -74,4 +64,20 @@ body,html {height:100%;position:relative;margin:0;padding:0;font-size:20px;}
 .download:hover {
   background-color:darken($brand-color,30%);
   -webkit-transition:background 0.5s;
+}
+
+.social-icon {
+  height:48px;
+  width:48px;
+  background-size:48px 48px!important;
+  display:inline-block;
+  line-height:48px;
+  font-size:14px;
+  text-indent:-9999px;
+  text-transform:uppercase;
+  font-weight:600;
+  color:#fff;
+  opacity:0.8;
+  -webkit-transition:text-indent .4s, opacity .4s;
+  transition:text-indent .4s, opacity .4s;
 }
