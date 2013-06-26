@@ -11,7 +11,7 @@ description: "NKD - Boilerplate for responsive HTML5/SCSS jekyll projects."
 # ============================================================
 author: "mrmrs"
 
-# Chance this when you generate your site for production to your production URL i.e http://mrsjxn.com
+# Change this when you generate your site for production to your production URL i.e http://mrsjxn.com
 # ============================================================
 #url: "http://productionurl.com
 url: "http://localhost:4000"
