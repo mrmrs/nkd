@@ -98,7 +98,7 @@ Run this to start sass development and preserve css comments. Helpful for debugg
 sass --watch _sass:css
 ```
 
-Run this to start the sass autocompiler with minified outpu. Outputs to /nkd/css/i.css.
+Run this to start the sass autocompiler with minified output. Outputs to /nkd/css/i.css.
 ### rake minify
 ```
 sass --watch _sass:css --style compressed
