@@ -19,10 +19,9 @@ description: "NKD - Boilerplate for responsive HTML5/SCSS jekyll projects."
 # ============================================================
 author: "mrmrs"
 
-# Change this when you generate your site for production to your production URL i.e http://mrsjxn.com
+# Change this to your production URL
 # ============================================================
-#url: "http://productionurl.com
-url: "http://localhost:4000"
+url: "http://productionurl.com"
 
 # Publish future posts or not option. 
 # ============================================================
@@ -45,8 +44,8 @@ permalink: pretty
 # Variable format options for URL styles below
 # ============================================================
 # pretty                                          => /2009/04/29/slap-chop/index.html
-# /:month-:day-:year/:title.html/            => 04-29-2009/slap-chop.html
-# /blog/:year/:month/:day/:title                 => /blog/2009/04/29/slap-chop/index.html
+# /:month-:day-:year/:title.html/                 => 04-29-2009/slap-chop.html
+# /blog/:year/:month/:day/:title                  => /blog/2009/04/29/slap-chop/index.html
 
 # Uncomment if you have pygments installed. Used for code syntax highlighting. 
 # If you're not doing syntax highlighting you can delete this.

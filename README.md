@@ -46,6 +46,7 @@ File structure is as follows:
 ```
 nkd                                 [ Site root ] 
   ├── README.md                     [ You are here ]
+  ├── Procfile                      [ Run everything ]
   ├── Rakefile                      [ Rake tasks! ]
   ├── _config.yml                   [ Site options ]
   ├── _includes
@@ -79,37 +80,45 @@ nkd                                 [ Site root ]
   └── touch-icon-iphone-retina-precomposed.png
 ```
 
+# Running
+
+In terminal run:
+
+```bash
+gem install foreman
+foreman start
+```
+
+Now go to http://localhost:4000 and see Hello World.
+
+What this did:
+
+* Started up jekyll in a way that will automatically rebuild your site as you work
+* Started up a SASS command that will automatically rebuild your CSS as you work
+
 # Rake Tasks
-## WAIT I'M A DESIGNER WHAT IS RAKE 
-Rake is super simple. Don't be afraid. In this instance it's used to map unix commands
-to "rake tasks". It's a lot easier to remember 'rake dev' then jekyll serve --watch, well 
-it is for me anyways. If you don't like any of these commands, don't be scared. Rakefile
-is a super easy file to edit - even if it looks scary because it doesn't have an extension.
 
-Start the jekyll server on port 4000. Preview in your browser at http://localhost:4000
-### rake dev
-```
-jekyll serve --watch
-```
 
-Run this to start sass development and preserve css comments. Helpful for debugging. Outputs to css/includes.css. 
-### rake sass
-```
-sass --watch _sass:css
-```
+Probably you don't need these for regular work, but they can be handy at times.  
+Don't worry, these "tasks" are just easier ways of running annoyingly-complex UNIX commands.
+
+### Work with minified CSS
 
 Run this to start the sass autocompiler with minified output. Outputs to /nkd/css/i.css.
-### rake minify
+
 ```
-sass --watch _sass:css --style compressed
+rake minify
 ```
 
-Run this to delete the _site directory. Use if you don't want to keep generated site locally unless actively developing.
-### rake clean
-```
-rm -rf _site
-```
 
+### Remove all generated files
+
+Run this to delete the _site directory. Use if you don't want to keep generated site locally unless actively developing or if
+you want to force jekyll to rebuild everything from scratch (sometimes can solve weird issues)
+
+```
+rake clean
+```
 
 # Resources
 
