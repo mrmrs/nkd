@@ -98,25 +98,27 @@ What this did:
 
 # Rake Tasks
 
-Probably you don't need this for regular work, but they can be handy.  Don't worry, these "tasks" are just easier ways of
-running annoyingly-complex UNIX commands.
 
-### rake minify
+Probably you don't need these for regular work, but they can be handy at times.  
+Don't worry, these "tasks" are just easier ways of running annoyingly-complex UNIX commands.
+
+### Work with minified CSS
 
 Run this to start the sass autocompiler with minified output. Outputs to /nkd/css/i.css.
 
 ```
-sass --watch _sass:css --style compressed
+rake minify
 ```
 
-### rake clean
 
-Run this to delete the _site directory. Use if you don't want to keep generated site locally unless actively developing.
+### Remove all generated files
+
+Run this to delete the _site directory. Use if you don't want to keep generated site locally unless actively developing or if
+you want to force jekyll to rebuild everything from scratch (sometimes can solve weird issues)
 
 ```
-rm -rf _site
+rake clean
 ```
-
 
 # Resources
 
