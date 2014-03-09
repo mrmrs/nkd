@@ -6,7 +6,7 @@
 #
 #=====================================
 
-# This will be the first part of the title tag for your site 
+# This will be the first part of the title tag for your site
 # <title> {{site.name}} </title>
 # ============================================================
 name: "NKD - Boilerplate for HTML5/SCSS projects."
@@ -21,9 +21,9 @@ author: "mrmrs"
 
 # Change this to your production URL
 # ============================================================
-url: "http://productionurl.com"
+url: "http://nkd.cc"
 
-# Publish future posts or not option. 
+# Publish future posts or not option.
 # ============================================================
 future: true
 
@@ -47,6 +47,6 @@ permalink: pretty
 # /:month-:day-:year/:title.html/                 => 04-29-2009/slap-chop.html
 # /blog/:year/:month/:day/:title                  => /blog/2009/04/29/slap-chop/index.html
 
-# Uncomment if you have pygments installed. Used for code syntax highlighting. 
+# Uncomment if you have pygments installed. Used for code syntax highlighting.
 # If you're not doing syntax highlighting you can delete this.
 #pygments: true

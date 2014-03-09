@@ -1,8 +1,11 @@
 /* ==========================================================================
    QUERIES
 
-   - Tablets
-   - Desktop
+   Mobile first media queries
+
+   - not-small
+   - medium
+   - large
    ========================================================================== */
 
 /**
@@ -11,15 +14,15 @@
  * at larger breakpoints where needed.
  *
  * You can use this query inside or outside of a class like so
- * @include breakpoint(tablet) {
- *    .someclass {color:red;}
+ * @include breakpoint(medium) {
+ *    .someclass { color: #ee4466; }
  * }
  *
  * or
  *
  * .someclass {
- *    @include breakpoint(desktop) {
- *      color:blue;
+ *    @include breakpoint(large) {
+ *      .someclass { color: #ffcc33; }
  *    }
  * }
  *
@@ -28,13 +31,17 @@
  */
 
 @mixin breakpoint($viewport-width) {
-  @if $viewport-width == tablet {
+  @if $viewport-width == not-small {
     @media screen
-       and (min-width:$tablet-min-width)
-       and (max-width:$tablet-max-width)   { @content; }
+       and (min-width:$MEDIUM-min-width) { @content; }
   }
-  @else if $viewport-width == desktop {
+  @else if $viewport-width == medium {
     @media screen
-       and (min-width:$desktop-min-width ) { @content; }
+       and (min-width:$MEDIUM-min-width)
+       and (max-width:$MEDIUM-max-width)   { @content; }
+  }
+  @else if $viewport-width == large {
+    @media screen
+       and (min-width:$LARGE-min-width) { @content; }
   }
 }

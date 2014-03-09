@@ -23,7 +23,8 @@ without any of the boring setup.
 ```bash
     git clone git@github.com:mrmrs/nkd.git [yourNewRepoName]
     cd [yourNewRepoName]
-    git remote rm origin
+    rm -rf .git
+    git init
     git remote add origin git@github.com:[yourUserName]/[yourNewRepoName].git
     git remote -v
 ```
@@ -47,6 +48,8 @@ File structure is as follows:
 nkd                                 [ Site root ]
   ├── README.md                     [ You are here ]
   ├── Procfile                      [ Run everything ]
+  ├── package.json                  [ project info and npm dependencies ]
+  ├── gulpfile.js                       [ Automated js tasks ]
   ├── Rakefile                      [ Rake tasks! ]
   ├── _config.yml                   [ Site options ]
   ├── _includes
@@ -80,13 +83,19 @@ nkd                                 [ Site root ]
   └── touch-icon-iphone-retina-precomposed.png
 ```
 
-# Running
+# Getting going
 
-In terminal run:
+```
+  cd nkd
+  npm install -g gulp
+  npm install .
+  gem install foreman
+  foreman start
+```
 
-```bash
-gem install foreman
-foreman start
+Then open a new terminal tab and run
+```
+gulp
 ```
 
 Now go to http://localhost:4000 and see Hello World.
@@ -94,20 +103,14 @@ Now go to http://localhost:4000 and see Hello World.
 What this did:
 
 * Started up jekyll in a way that will automatically rebuild your site as you work
-* Started up a SASS command that will automatically rebuild your CSS as you work
-
-# Rake Tasks
-
-
-Probably you don't need these for regular work, but they can be handy at times.
-Don't worry, these "tasks" are just easier ways of running annoyingly-complex UNIX commands.
+* Started up a SASS command that will automatically rebuild your CSS as you work + reload the browser everytime you save a file.
 
 ### Work with minified CSS
 
-Run this to start the sass autocompiler with minified output. Outputs to /nkd/css/i.css.
+Run this to minify images, css, and svg assets.
 
 ```
-rake minify
+gulp production
 ```
 
 
