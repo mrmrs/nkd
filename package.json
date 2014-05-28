@@ -6,7 +6,20 @@
     "type" : "git",
     "url" : "http://github.com/mrmrs/nkd.git"
   },
+  "bugs" : {
+    "url" : "http://github.com/mrmrs/nkd/issues",
+    "email" : "hi@mrmrs.cc"
+  },
   "homepage": "http://nkd.cc",
+  "keywords": [
+     "jekyll",
+     "ruby",
+     "static site generator",
+     "html5", 
+     "css", 
+     "sass", 
+     "template"
+   ] 
   "devDependencies": {
     "gulp": "~3.5.5",
     "gulp-livereload": "~0.2.0",
