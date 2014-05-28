@@ -4,7 +4,7 @@
   "version": "0.2.0",
   "repository" : {
     "type" : "git",
-    "url" : "http://github.com/mrmrs/nkd.git"
+    "url" : "git://github.com/mrmrs/nkd.git"
   },
   "bugs" : {
     "url" : "http://github.com/mrmrs/nkd/issues",
