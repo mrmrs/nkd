@@ -19,7 +19,7 @@
      "css", 
      "sass", 
      "template"
-   ] 
+  ], 
   "devDependencies": {
     "gulp": "~3.5.5",
     "gulp-livereload": "~0.2.0",
