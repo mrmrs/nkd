@@ -3,37 +3,41 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     watch = require('gulp-watch'),
-    lr    = require('tiny-lr'),
-    server = lr(),
-    livereload = require('gulp-livereload'),
     prefix = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     imagemin = require('gulp-imagemin'),
     svgmin = require('gulp-svgmin'),
-    csslint = require('gulp-csslint');
+    size = require('gulp-size'),
+    rename = require('gulp-rename'),
+    pngcrush = require('imagemin-pngcrush'),
+    browserSync = require('browser-sync'),
+    csslint = require('gulp-csslint'),
+    browserReload = browserSync.reload;
+
+// Initialize browser-sync which starts a static server also allows for 
+// browsers to reload on filesave
+gulp.task('browser-sync', function() {
+    browserSync.init(null, {
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+
+// Function to call for reloading browsers
+gulp.task('bs-reload', function () {
+    browserSync.reload();
+});
 
 
-// Task to minify all css files in the css directory
 gulp.task('minify-css', function(){
-  gulp.src('./css/*.css')
-    .pipe(minifyCSS({keepSpecialComments: 0}))
+gulp.src('./css/nkd.css') // set this to the file(s) you want to minify. 
+    .pipe(minifyCSS())
+    .pipe(size({gzip: false, showFiles: true, title:'minified css'}))
+    .pipe(size({gzip: true, showFiles: true, title:'minified css'}))
+    .pipe(rename('nkd.min.css'))
     .pipe(gulp.dest('./css/'));
-});
-
-// Reload html
-gulp.task('reload', function(){
-  gulp.src('*.html')
-    .pipe(watch(function(files) {
-      return files.pipe(livereload(server));
-    }));
-});
-
-// Task to optmize and minify images
-gulp.task('minify-img', function() {
-  return gulp.src('./img/*')
-    .pipe((imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('./img'));
 });
 
 // Task to optimize and minify svg
@@ -41,6 +45,20 @@ gulp.task('minify-svg', function(){
   gulp.src('./img/svg')
           .pipe(svgmin())
           .pipe(gulp.dest('./img/svg'));
+});
+
+gulp.task('minify-images', function(){
+  gulp.src('./img/*')
+     .pipe(size({gzip: false, showFiles: true, title:'original image size'}))
+     .pipe(size({gzip: true, showFiles: true, title:'original image size'}))
+     .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngcrush()]
+      }))
+      .pipe(size({gzip: false, showFiles: true, title:'minified images'}))
+      .pipe(size({gzip: true, showFiles: true, title:'minified images'}))
+      .pipe(gulp.dest('./img')); // change the dest if you don't want your images overwritten
 });
 
 // Use csslint without box-sizing or compatible vendor prefixes (these
@@ -60,31 +78,33 @@ gulp.task('csslint', function(){
 gulp.task('pre-process', function(){
   gulp.src('./_sass/nkd.scss')
       .pipe(watch(function(files) {
-        return files.pipe(sass({loadPath: ['./_sass/'], style: "compact"}))
+        return files.pipe(sass())
+          .pipe(size({gzip: false, showFiles: true, title:'without vendor prefixes'}))
+          .pipe(size({gzip: true, showFiles: true, title:'without vendor prefixes'}))
           .pipe(prefix())
-          .pipe(gulp.dest('./css/'))
-          .pipe(livereload(server));
+          .pipe(size({gzip: false, showFiles: true, title:'after vendor prefixes'}))
+          .pipe(size({gzip: true, showFiles: true, title:'after vendor prefixes'}))
+          .pipe(gulp.dest('css'))
+          .pipe(browserSync.reload({stream:true}));
       }));
-});
-
-/*
-   DEFAULT TASK
-
- • Process sass and lints outputted css
- • Outputted css is run through autoprefixer
- • Sends updates to any files in directory to browser for
-   automatic reloading
-
-*/
-gulp.task('default', function(){
-  server.listen(35729, function (err) {
-    gulp.watch(['*.html', '*/*.html', './_sass/*.scss'], function(event) {
-      gulp.run('pre-process', 'csslint', 'reload');
-    });
-  });
 });
 
 gulp.task('production', function(){
     gulp.run('minify-css', 'minify-img', 'minify-svg');
 });
 
+
+/*
+   DEFAULT TASK
+
+ • Process sass then auto-prefixes and lints outputted css
+ • Starts a server on port 3000
+ • Reloads browsers when you change html or sass files
+
+*/
+gulp.task('default', ['pre-process', 'minify-css', 'bs-reload', 'browser-sync'], function(){
+  gulp.start('pre-process', 'csslint');
+  gulp.watch('sass/*.scss', ['pre-process', 'minify-css']);
+  gulp.watch('css/nkd.css', ['bs-reload', 'minify-css']);
+  gulp.watch('*.html', ['bs-reload'])
+});
