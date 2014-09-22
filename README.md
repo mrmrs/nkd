@@ -71,9 +71,9 @@ nkd                                 [ Site root ]
   │   ├── _styles.scss
   │   ├── _type.scss
   │   ├── _variables.scss
-  │   └── i.scss                    [Imports .scss files, compiles to css/i.css]
+  │   └── i.scss                    [Imports .scss files, compiles to css/nkd.css]
   ├── css
-  │   └── i.css                     [1.8KB minified / 214B gzipped - includes normalize.css]
+  │   └── nkd.css                     [1.8KB minified / 214B gzipped - includes normalize.css]
   ├── favicon.icns
   ├── favicon.ico
   ├── index.html                    [index file that's served up at root. The "homepage" if you will.]
