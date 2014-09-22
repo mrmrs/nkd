@@ -13,7 +13,8 @@ var gulp = require('gulp'),
     pngcrush = require('imagemin-pngcrush'),
     browserSync = require('browser-sync'),
     csslint = require('gulp-csslint'),
-    browserReload = browserSync.reload;
+    browserReload = browserSync.reload,
+    rimraf = require('gulp-rimraf');
 
 // Initialize browser-sync which starts a static server also allows for 
 // browsers to reload on filesave
@@ -91,6 +92,12 @@ gulp.task('pre-process', function(){
 
 gulp.task('production', function(){
     gulp.run('minify-css', 'minify-img', 'minify-svg');
+});
+
+// Remove _site from directory before committing
+gulp.task('clean', function() {
+  return gulp.src('_site/', { read: false })
+    .pipe(rimraf({ force: true }));
 });
 
 
