@@ -4,3 +4,4 @@ Gemfile
 Gemfile.lock
 .sass-cache
 _site
+node_modules
