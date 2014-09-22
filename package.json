@@ -28,6 +28,7 @@
     "gulp-imagemin": "~0.1.4",
     "gulp-minify-css": "~0.3.5",
     "gulp-rename": "^1.2.0",
+    "gulp-rimraf": "^0.1.0",
     "gulp-sass": "~0.7.2",
     "gulp-shell": "^0.2.9",
     "gulp-size": "^0.4.0",
