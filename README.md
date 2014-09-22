@@ -71,7 +71,7 @@ nkd                                 [ Site root ]
   │   ├── _styles.scss
   │   ├── _type.scss
   │   ├── _variables.scss
-  │   └── i.scss                    [Imports .scss files, compiles to css/nkd.css]
+  │   └── nkd.scss                    [Imports .scss files, compiles to css/nkd.css]
   ├── css
   │   └── nkd.css                     [1.8KB minified / 214B gzipped - includes normalize.css]
   ├── favicon.icns
