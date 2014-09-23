@@ -129,6 +129,7 @@ gulp.task('jekyll-serve', function (done) {
 */
 gulp.task('default', ['pre-process', 'minify-css', 'bs-reload', 'browser-sync'], function(){
   gulp.start('pre-process', 'csslint');
+  gulp.watch(['_includes/*', '_layouts/*', '_posts/*', '_resources/*', '_sass/*', '*.html', '_*config.yml'], ['jekyll-build']);
   gulp.watch('sass/*.scss', ['pre-process', 'minify-css']);
   gulp.watch('css/nkd.css', ['bs-reload', 'minify-css']);
   gulp.watch('*.html', ['bs-reload'])
