@@ -107,6 +107,12 @@ gulp.task('jekyll-build', function (done) {
         .on('close', done);
 });
 
+// Watch & Build the Jekyll Site
+gulp.task('jekyll-watch', function (done) {
+    return cp.spawn('jekyll', ['build', '--watch'], {stdio: 'inherit'})
+        .on('close', done);
+});
+
 // Serve the Jekyll Site
 gulp.task('jekyll-serve', function (done) {
     return cp.spawn('jekyll', ['serve', '--watch', '--config', '_config.yml,_development_config.yml'], {stdio: 'inherit'})
