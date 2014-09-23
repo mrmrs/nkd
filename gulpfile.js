@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     csslint = require('gulp-csslint'),
     browserReload = browserSync.reload,
-    rimraf = require('gulp-rimraf');
+    rimraf = require('gulp-rimraf'),
+    cp = require('child_process');
 
 // Initialize browser-sync which starts a static server also allows for 
 // browsers to reload on filesave
@@ -100,6 +101,11 @@ gulp.task('clean', function() {
     .pipe(rimraf({ force: true }));
 });
 
+// Build the Jekyll Site
+gulp.task('jekyll-build', function (done) {
+    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
 
 /*
    DEFAULT TASK
