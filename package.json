@@ -30,7 +30,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-rimraf": "^0.1.0",
     "gulp-sass": "~0.7.2",
-    "gulp-shell": "^0.2.9",
+    "gulp-shell": "^0.2.11",
     "gulp-size": "^0.4.0",
     "gulp-svgmin": "~0.4.1",
     "gulp-util": "~2.2.12",
@@ -39,14 +39,38 @@
     "jshint-stylish": "~0.1.5"
   },
   "contributors": [
-    { "name": "Jake Champion", "email": "me@jakechampion.name" },
-    { "name": "Dave C. Copeland", "email": "davetron5000@gmail.com" },
-    { "name": "Doug March", "email": "dougmarch@gmail.com" },
-    { "name": "Chris Blanch", "url": "http://chrisblanch.com" },
-    { "name": "David Potsiadlo", "email": "davidpots@gmail.com" },
-    { "name": "Huy Hong", "email": "me@huyhong.com" },
-    { "name": "Kyle MacDonald", "email": "macdonaldky@gmail.com" },
-    { "name": "Adam Morse", "email": "hi@mrmrs.cc" }
+    {
+      "name": "Jake Champion",
+      "email": "me@jakechampion.name"
+    },
+    {
+      "name": "Dave C. Copeland",
+      "email": "davetron5000@gmail.com"
+    },
+    {
+      "name": "Doug March",
+      "email": "dougmarch@gmail.com"
+    },
+    {
+      "name": "Chris Blanch",
+      "url": "http://chrisblanch.com"
+    },
+    {
+      "name": "David Potsiadlo",
+      "email": "davidpots@gmail.com"
+    },
+    {
+      "name": "Huy Hong",
+      "email": "me@huyhong.com"
+    },
+    {
+      "name": "Kyle MacDonald",
+      "email": "macdonaldky@gmail.com"
+    },
+    {
+      "name": "Adam Morse",
+      "email": "hi@mrmrs.cc"
+    }
   ],
   "license": "MIT",
   "scripts": {
