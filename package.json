@@ -1,7 +1,7 @@
 {
   "name": "nkd",
   "description": "Barebones scaffolding for developing a jekyll site.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/mrmrs/nkd.git"
