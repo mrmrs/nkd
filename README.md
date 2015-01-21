@@ -23,14 +23,15 @@ without any of the boring setup.
 ```bash
     git clone git@github.com:mrmrs/nkd.git [yourNewRepoName]
     cd [yourNewRepoName]
+    npm install && npm start
+```
+
+If you want to set this up as your own github project you'll want to do the following.
+```bash
     rm -rf .git
     git init
     git remote add origin git@github.com:[yourUserName]/[yourNewRepoName].git
     git remote -v
-```
-
-* git remote -v will allow you to check that you have changed the remote origin correctly. The output should look like:
-```bash
     origin git@github.com:[yourUserName]/[yourNewRepoName].git (fetch)
     origin  git@github.com:[yourUserName]/[yourNewRepoName].git (push)
 ```
@@ -47,11 +48,10 @@ File structure is as follows:
 ```
 nkd                                 [ Site root ]
   ├── README.md                     [ You are here ]
-  ├── Procfile                      [ Run everything ]
   ├── package.json                  [ project info and npm dependencies ]
   ├── gulpfile.js                       [ Automated js tasks ]
-  ├── Rakefile                      [ Rake tasks! ]
   ├── _config.yml                   [ Site options ]
+  ├── _development_config.yml                   [ Site options ]
   ├── _includes
   │   ├── _footer.html
   │   ├── _head.html
@@ -83,46 +83,6 @@ nkd                                 [ Site root ]
   └── touch-icon-iphone-retina-precomposed.png
 ```
 
-# Getting going
-
-```
-  cd nkd
-  npm install -g gulp
-  npm install .
-  gem install foreman
-  foreman start
-```
-
-Then open a new terminal tab and run
-```
-gulp
-```
-
-Now go to http://localhost:4000 and see Hello World.
-
-What this did:
-
-* Started up jekyll in a way that will automatically rebuild your site as you work
-* Started up a SASS command that will automatically rebuild your CSS as you work + reload the browser everytime you save a file.
-
-### Work with minified CSS
-
-Run this to minify images, css, and svg assets.
-
-```
-gulp production
-```
-
-
-### Remove all generated files
-
-Run this to delete the _site directory. Use if you don't want to keep generated site locally unless actively developing or if
-you want to force jekyll to rebuild everything from scratch (sometimes can solve weird issues)
-
-```
-rake clean
-```
-
 # Resources
 
 There is an included Adobe Illustrator file that has artboards for every favicon size you'll need.
@@ -136,7 +96,7 @@ reference to.
 
 The MIT License (MIT)
 
-Copyright (c) 2014 @mrmrs
+Copyright (c) 2015 @mrmrs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
