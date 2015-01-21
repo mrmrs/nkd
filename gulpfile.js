@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     svgmin = require('gulp-svgmin'),
     size = require('gulp-size'),
+    jekyll = require('gulp-jekyll'),
     rename = require('gulp-rename'),
     pngcrush = require('imagemin-pngcrush'),
     browserSync = require('browser-sync'),
@@ -110,8 +111,12 @@ gulp.task('production', function(){
 
 */
 gulp.task('default', ['pre-process', 'minify-css', 'bs-reload', 'browser-sync', 'shorthand'], function(){
-  gulp.start('pre-process', 'csslint', 'shorthand');
-  gulp.watch(['_includes/*', '_layouts/*', '_posts/*', '_resources/*', '_sass/*', '*.html', '_*config.yml']);
-  gulp.watch('sass/*.scss', ['pre-process']);
-  gulp.watch('*.html', ['bs-reload'])
+  gulp.start('pre-process', 'csslint');
+  gulp.src(['./index.html', './_layouts/*.html', './_posts/*.{markdown,md}'])
+      .pipe(jekyll({
+          source: './',
+          destination: './_site/',
+          bundleExec: true
+      }))
+      .pipe(gulp.dest('./_site/'));
 });
