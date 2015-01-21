@@ -5,8 +5,9 @@ layout: default
 <main>
   <h1>Hello World</h1>
 </main>
-
+<footer>
 {% if site.posts %}
+<h2>A list of all the posts</h2>
   <ul>
     {% for post in site.posts %}
       <li>
@@ -17,3 +18,4 @@ layout: default
     {% endfor %}
   </ul>
 {% endif %}
+</footer>
