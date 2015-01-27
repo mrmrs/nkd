@@ -49,4 +49,4 @@ permalink: pretty
 
 # Uncomment if you have pygments installed. Used for code syntax highlighting.
 # If you're not doing syntax highlighting you can delete this.
-#pygments: true
+# highlighter: pygments
