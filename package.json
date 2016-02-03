@@ -21,23 +21,7 @@
     "template"
   ],
   "devDependencies": {
-    "browser-sync": "^1.1.1",
-    "gulp": "~3.5.5",
-    "gulp-autoprefixer": "0.0.5",
-    "gulp-csslint": "~0.1.3",
-    "gulp-imagemin": "~0.1.4",
-    "gulp-jekyll": "0.0.0",
-    "gulp-minify-css": "~0.3.5",
-    "gulp-rename": "^1.2.0",
-    "gulp-rimraf": "^0.1.0",
-    "gulp-sass": "~0.7.2",
-    "gulp-shell": "^0.2.11",
-    "gulp-size": "^0.4.0",
-    "gulp-svgmin": "~0.4.1",
-    "gulp-util": "~2.2.12",
-    "gulp-watch": "^0.6.8",
-    "imagemin-pngcrush": "^1.0.0",
-    "jshint-stylish": "~0.1.5"
+
   },
   "contributors": [
     {
@@ -75,6 +59,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "start": "gulp"
+    "start": "tachyons src/nkd.css > css/nkd.css && tachyons src/nkd.css --minify > css/nkd.min.css && tachyons src/nkd.css --generate-docs --package=../../package.json > readme.md"
   }
 }
