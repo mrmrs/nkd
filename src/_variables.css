@@ -1,13 +1,9 @@
-/* ==========================================================================
+/*
    VARIABLES
-
-   -
-   - Type Scale
-   ========================================================================== */
+*/
 
 
-/* Breakpoints
-   ========================================================================== */
+/* Breakpoints */
 
 @custom-media --medium-and-larger screen and (min-width: 30em);
 @custom-media --breakpoint-medium screen and (min-width: 30em) and (max-width: 60em);

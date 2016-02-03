@@ -86,3 +86,11 @@ body,
 .lh-title { line-height:1.3; }
 .lh-copy  { line-height:1.6; }
 
+/* */
+
+.content p,
+.content blockquote,
+.content small {
+  max-width: 30em;
+  line-height: 1.5;
+}
