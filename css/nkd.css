@@ -1,13 +1,9 @@
 /* NKD */
 /* Include all css partials you want compiled to nkd.css. */
-/* ==========================================================================
+/*
    VARIABLES
-
-   -
-   - Type Scale
-   ========================================================================== */
-/* Breakpoints
-   ========================================================================== */
+*/
+/* Breakpoints */
 /* Type Scale */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -216,6 +212,10 @@ optgroup { font-weight: bold; }
  */
 table { border-collapse: collapse; border-spacing: 0; }
 td, th { padding: 0; }
+/* Resets */
+/* Remove default styling on lists */
+.list-reset { list-style: none; }
+.input-reset { appearance: none; -webkit-appearance: none; -moz-appearance: none; }
 /*
    TYPE
 
@@ -266,6 +266,72 @@ body, .sans-serif { font-family: -apple-system, "Avenir Next", Avenir, "Helvetic
 .lh-solid { line-height: 1; }
 .lh-title { line-height: 1.3; }
 .lh-copy { line-height: 1.6; }
+/* */
+.content p, .content blockquote, .content small { max-width: 30em; line-height: 1.5; }
+.link { text-decoration: none; }
+.dim { opacity: 1; transition: opacity .15s ease-in; }
+.dim:focus, .dim:hover { opacity: .8; transition: opacity .15s ease-out; }
+/* Spacing */
+.pa0 { padding: 0; }
+.pa1 { padding: .25rem; }
+.pa2 { padding: .5rem; }
+.pa3 { padding: 1rem; }
+.pa4 { padding: 2rem; }
+.pa5 { padding: 4rem; }
+.pt0 { padding-top: 0; }
+.pt1 { padding-top: .25rem; }
+.pt2 { padding-top: .5rem; }
+.pt3 { padding-top: 1rem; }
+.pt4 { padding-top: 2rem; }
+.pt5 { padding-top: 4rem; }
+.pr0 { padding-right: 0; }
+.pr1 { padding-right: .25rem; }
+.pr2 { padding-right: .5rem; }
+.pr3 { padding-right: 1rem; }
+.pr4 { padding-right: 2rem; }
+.pr5 { padding-right: 4rem; }
+.pb0 { padding-bottom: 0; }
+.pb1 { padding-bottom: .25rem; }
+.pb2 { padding-bottom: .5rem; }
+.pb3 { padding-bottom: 1rem; }
+.pb4 { padding-bottom: 2rem; }
+.pb5 { padding-bottom: 4rem; }
+.pl0 { padding-left: 0; }
+.pl1 { padding-left: .25rem; }
+.pl2 { padding-left: .5rem; }
+.pl3 { padding-left: 1rem; }
+.pl4 { padding-left: 2rem; }
+.pl5 { padding-left: 4rem; }
+.ma0 { margin: 0; }
+.ma1 { margin: .25rem; }
+.ma2 { margin: .5rem; }
+.ma3 { margin: 1rem; }
+.ma4 { margin: 2rem; }
+.ma5 { margin: 4rem; }
+.mt0 { margin-top: 0; }
+.mt1 { margin-top: .25rem; }
+.mt2 { margin-top: .5rem; }
+.mt3 { margin-top: 1rem; }
+.mt4 { margin-top: 2rem; }
+.mt5 { margin-top: 4rem; }
+.mr0 { margin-right: 0; }
+.mr1 { margin-right: .25rem; }
+.mr2 { margin-right: .5rem; }
+.mr3 { margin-right: 1rem; }
+.mr4 { margin-right: 2rem; }
+.mr5 { margin-right: 4rem; }
+.mb0 { margin-bottom: 0; }
+.mb1 { margin-bottom: .25rem; }
+.mb2 { margin-bottom: .5rem; }
+.mb3 { margin-bottom: 1rem; }
+.mb4 { margin-bottom: 2rem; }
+.mb5 { margin-bottom: 4rem; }
+.ml0 { margin-left: 0; }
+.ml1 { margin-left: .25rem; }
+.ml2 { margin-left: .5rem; }
+.ml3 { margin-left: 1rem; }
+.ml4 { margin-left: 2rem; }
+.ml5 { margin-left: 4rem; }
 /*
    SITE STYLES
 */
