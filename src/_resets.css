@@ -1,0 +1,12 @@
+/* Resets */
+
+/* Remove default styling on lists */
+.list-reset {
+  list-style: none;
+}
+
+.input-reset {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
