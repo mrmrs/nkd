@@ -1,0 +1,15 @@
+.link {
+  text-decoration: none;
+}
+
+.dim {
+  opacity: 1;
+  transition: opacity .15s ease-in;
+}
+
+.dim:focus,
+.dim:hover {
+  opacity: .8;
+  transition: opacity .15s ease-out;
+}
+
