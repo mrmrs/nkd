@@ -21,7 +21,9 @@
     "template"
   ],
   "devDependencies": {
-
+    "parallelshell": "^2.0.0",
+    "tachyons-cli": "^0.3.3",
+    "watch": "^0.17.1"
   },
   "contributors": [
     {
@@ -59,6 +61,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "start": "tachyons src/nkd.css > css/nkd.css && tachyons src/nkd.css --minify > css/nkd.min.css && tachyons src/nkd.css --generate-docs --package=../../package.json > readme.md"
+    "serve": "jekyll serve",
+    "build": "tachyons src/nkd.css > css/nkd.css && tachyons src/nkd.css --minify > css/nkd.min.css && tachyons src/nkd.css --generate-docs --package=../../package.json > readme.md",
+    "watch": "watch 'npm run build' src/",
+    "start": "parallelshell 'npm run serve' 'npm run watch'"
   }
 }
