@@ -1,7 +1,19 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
   {% include _head.html %}
   <body>
     {{ content }}
+    {% if site.posts %}
+      <h2>Other Posts</h2>
+      <ul>
+        {% for post in site.posts %}
+          <li>
+            <a href="{{ post.url }}" title="{{post.title}}">
+              {{ post.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </body>
 </html>
