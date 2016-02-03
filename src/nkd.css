@@ -1,10 +1,10 @@
-// Include all partials you want compiled to nkd.css. You don't need to include the _ (underscore). Hooray.
+/* NKD */
+/* Include all css partials you want compiled to nkd.css. */
 
-@import "variables";
-@import "queries";
-@import "normalize";
+@import '_variables';
+@import '_queries';
+@import '_normalize';
 
-@import "grid";
-@import "type";
-@import "styles";
+@import '_type';
+@import '_styles';
 
