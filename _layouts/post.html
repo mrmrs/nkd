@@ -2,18 +2,23 @@
 <html lang="en">
   {% include _head.html %}
   <body>
-    {{ content }}
+    <main class="pa3 content">
+      {{ content }}
+    </main>
     {% if site.posts %}
-      <h2>Other Posts</h2>
-      <ul>
-        {% for post in site.posts %}
-          <li>
-            <a href="{{ post.url }}" title="{{post.title}}">
-              {{ post.title }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="pa3">
+        <h1 class="f6 fw6">Archives</h1>
+        <ul class="list-reset ml0 pl0 lh-copy">
+          {% for post in site.posts %}
+            <li>
+              <a class="link dim" href="{{ post.url }}" title="{{post.title}}">
+                {{ post.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     {% endif %}
+    {% include _footer.html %}
   </body>
 </html>
