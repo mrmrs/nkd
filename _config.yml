@@ -11,9 +11,15 @@
 # ============================================================
 name: "NKD - Boilerplate for HTML5/SCSS projects."
 
+# Add your twitter handle (appears in site footer)
+twitter: @mrmrs_
+
+# Add your email (appears in site footer)
+email: hi@mrmrs.cc
+
 # Populates the meta description for the site. Should be under 150 characters for best SEO results.
 # ============================================================
-description: "NKD - Boilerplate for responsive HTML5/SCSS jekyll projects."
+description: "NKD - Boilerplate for building responsive jekyll sites."
 
 # Owner (organization or individual) of site content - You'll want to change this from mrmrs :)
 # ============================================================
@@ -21,7 +27,7 @@ author: "mrmrs"
 
 # Change this to your production URL
 # ============================================================
-url: "http://nkd.cc"
+url: "http://localhost:4000"
 
 # Publish future posts or not option.
 # ============================================================
@@ -31,7 +37,7 @@ future: true
 # I normally exclude _sass, README*, and .gitignore
 # Directories that start with an underscore _ are not copied over by default. Still like to include _sass anyways.
 # ============================================================
-exclude: [README.md, Rakefile, node_modules]
+exclude: [README.md, node_modules, src]
 
 # Pagination variable for how many posts to show in a list
 # ============================================================
@@ -49,4 +55,4 @@ permalink: pretty
 
 # Uncomment if you have pygments installed. Used for code syntax highlighting.
 # If you're not doing syntax highlighting you can delete this.
-# highlighter: pygments
+#highlighter: rouge
