@@ -2,16 +2,17 @@
 layout: default
 ---
 
-<main>
-  <h1>Hello World!</h1>
-  <p>This is a website that has multiple posts in a blog type format.</p>
-  <p>Edit or add posts in the _posts/ directory</p>
-  <p>Add a new page by creating a directory with the name i.e to make the url http://localhost:3000/about/ just create a directory called about and put a new index.html file in there.</p>
+<main class="pa3">
+  <h1 class="f1 mt0 mb3">NKD</h1>
+  <h2 class="f3 mt0 mb0">Hello World!</h2>
+  <p class="measure lh-copy">This is a fully responsive jekyll website. It's just some scaffolding  if you want to start your own jekyll site.</p>
+  <p class="measure lh-copy">Edit or add posts in the _posts/ directory</p>
+  <p class="measure lh-copy">Edit or add layouts in the _layouts/ directory</p>
 </main>
-<footer>
+<footer class="pa3">
 {% if site.posts %}
-  <h2>A list of all the posts</h2>
-  <ul>
+  <h2 class="f6 fw6">Posts</h2>
+  <ul class="list-reset pl0 ml0 lh-copy">
     {% for post in site.posts %}
       <li>
         <a href="{{ post.url }}" title="{{post.title}}">
