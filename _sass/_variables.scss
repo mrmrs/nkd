@@ -21,20 +21,21 @@
  */
 
 /* Large Breakpoint */
-$LARGE-min-width: 64em;
+$LARGE-min-width: 60em;
 
 /* Medium Breakpoint */
-$MEDIUM-max-width: 64;
-$MEDIUM-min-width: 32em;
+$MEDIUM-max-width: 60em;
+$MEDIUM-min-width: 30em;
 
 
 /* Type Scale - I always need a type-scale
    ========================================================================== */
 
-$font-size-1:64px;
-$font-size-2:48px;
-$font-size-3:32px;
-$font-size-4:20px; // The new black
-$font-size-5:16px;
-$font-size-6:12px; // Should only be used for text you want no one to read.
+$font-size-1: 96px;
+$font-size-2: 62px;
+$font-size-3: 48px;
+$font-size-4: 32px;
+$font-size-5: 24px; // The new black
+$font-size-6: 19px;
+$font-size-7: 16px; // Should only be used for text you want no one to read.
 
