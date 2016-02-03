@@ -2,7 +2,6 @@
 /* Include all css partials you want compiled to nkd.css. */
 
 @import '_variables';
-@import '_queries';
 @import '_normalize';
 
 @import '_type';
