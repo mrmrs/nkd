@@ -3,7 +3,7 @@
 
    Mobile first media queries
 
-   - not-small
+   - medium and larger
    - medium
    - large
    ========================================================================== */
@@ -14,34 +14,12 @@
  * at larger breakpoints where needed.
  *
  * You can use this query inside or outside of a class like so
- * @include breakpoint(medium) {
+ * @media (--medium) {
  *    .someclass { color: #ee4466; }
  * }
  *
- * or
- *
- * .someclass {
- *    @include breakpoint(large) {
- *      .someclass { color: #ffcc33; }
- *    }
- * }
- *
- * It's rather lovely.
- *
  */
 
-@mixin breakpoint($viewport-width) {
-  @if $viewport-width == not-small {
-    @media screen
-       and (min-width:$MEDIUM-min-width) { @content; }
-  }
-  @else if $viewport-width == medium {
-    @media screen
-       and (min-width:$MEDIUM-min-width)
-       and (max-width:$MEDIUM-max-width)   { @content; }
-  }
-  @else if $viewport-width == large {
-    @media screen
-       and (min-width:$LARGE-min-width) { @content; }
-  }
-}
+@custom-media --medium-and-larger screen and (min-width: 30em);
+@custom-media --breakpoint-medium screen and (min-width: 30em) and (max-width: 60em);
+@custom-media --breakpoint-large screen and (min-width: 60em);
