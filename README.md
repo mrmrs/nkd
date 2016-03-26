@@ -1,4 +1,4 @@
-Checkout [nkd.cc](http://nkd.cc "NKD")
+Checkout [http://mrmrs.io/nkd](http://mrmrs.io/nkd "NKD")
 
 # NKD
 
