@@ -21,23 +21,23 @@
     "template"
   ],
   "devDependencies": {
-    "browser-sync": "^1.1.1",
-    "gulp": "~3.5.5",
-    "gulp-autoprefixer": "0.0.5",
-    "gulp-csslint": "~0.1.3",
-    "gulp-imagemin": "~0.1.4",
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.4",
+    "gulp-csslint": "^0.3.0",
+    "gulp-imagemin": "^2.4.0",
     "gulp-jekyll": "0.0.0",
-    "gulp-minify-css": "~0.3.5",
-    "gulp-rename": "^1.2.0",
-    "gulp-rimraf": "^0.1.0",
-    "gulp-sass": "~0.7.2",
-    "gulp-shell": "^0.2.11",
-    "gulp-size": "^0.4.0",
-    "gulp-svgmin": "~0.4.1",
-    "gulp-util": "~2.2.12",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-shell": "^0.5.2",
+    "gulp-size": "^2.1.0",
+    "gulp-svgmin": "~1.2.2",
+    "gulp-util": "~3.0.7",
     "gulp-watch": "^0.6.8",
-    "imagemin-pngcrush": "^1.0.0",
-    "jshint-stylish": "~0.1.5"
+    "imagemin-pngcrush": "^4.1.0",
+    "jshint-stylish": "^2.1.0"
   },
   "contributors": [
     {
