@@ -2,8 +2,16 @@ GEM
   remote: https://rubygems.org/
   specs:
     colorator (1.1.0)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
+    eventmachine (1.2.0.1)
     ffi (1.9.14)
     forwardable-extended (2.6.0)
+    hawkins (2.0.3)
+      em-websocket (~> 0.5)
+      jekyll (~> 3.1)
+    http_parser.rb (0.6.0)
     jekyll (3.2.1)
       colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
@@ -37,4 +45,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  hawkins (~> 2.0.3)
   jekyll (~> 3.2.0)

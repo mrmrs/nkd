@@ -62,7 +62,7 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "bundle install",
-    "serve": "bundle exec jekyll serve",
+    "serve": "bundle exec jekyll liveserve",
     "build": "tachyons src/nkd.css > css/nkd.css && tachyons src/nkd.css --minify > css/nkd.min.css && tachyons src/nkd.css --generate-docs --package=../../package.json > readme.md",
     "watch": "watch 'npm run build' src/",
     "start": "parallelshell 'npm run serve' 'npm run watch'"
