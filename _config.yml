@@ -37,7 +37,7 @@ future: true
 # I normally exclude _sass, README*, and .gitignore
 # Directories that start with an underscore _ are not copied over by default. Still like to include _sass anyways.
 # ============================================================
-exclude: [README.md, node_modules, src]
+exclude: [README.md, node_modules, src, Gemfile, Gemfile.lock]
 
 # Pagination variable for how many posts to show in a list
 # ============================================================
